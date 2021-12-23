@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+:root {
+  /* colors */
+  --color_soft_cyan: hsl(174, 77%, 80%);
+  --color_strong_cyan: hsl(174, 86%, 45%);
+  --color_light_grayish_red: hsl(14, 92%, 95%);
+  --color_light_red: hsl(15, 100%, 70%);
+  --color_pale_blue: hsl(226, 100%, 87%);
+  --color_white: hsl(0, 0%, 100%);
+  --color_very_pale_blue: hsl(230, 100%, 99%);
+  --color_light_grayish_blue1: hsl(224, 65%, 95%);
+  --color_light_grayish_blue2: hsl(223, 50%, 87%);
+  --color_grayish_blue: hsl(225, 20%, 60%);
+  --color_dark_desaturated_blue: hsl(227, 35%, 25%);
+  --color_box_shadow: #f2f2f2;
+
+  /* variables */
+
+  --slider_color: var(--color_soft_cyan);
+  --slider_bg: var(--color_strong_cyan);
+  --discount_bg: var(--color_light_grayish_red);
+  --discount_text: var(--color_light_red);
+  --cta_text: var(--color_pale_blue);
+  --pricing_bg: var(--color_white);
+  --main_bg: var(--color_very_pale_blue);
+  --empty_slider: var(--color_light_grayish_blue1);
+  --toggle_bg: var(--color_light_grayish_blue1);
+  --text: var(--color_grayish_blue);
+  --text_bg: var(--color_dark_desaturated_blue);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  height: 100%;
+  font-size: 15px;
+  background: var(--main_bg);
+}
+
+body {
+  background-image: url("./assets/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 50%;
 }
