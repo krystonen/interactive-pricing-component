@@ -39,56 +39,59 @@ function App() {
         </p>
       </header>
       <article className="pricing__card">
-        <header className="pricing__card__header">
-          <div className="header__left">
-            {displayPageViews(price)} Pageviews
-          </div>
-          <div className="header__right">
-            <span className="header__right--large">${price.toFixed(2)}</span>
-            <p> / month</p>
-          </div>
-        </header>
+        <div className="pricing__card__top">
+          <header className="pricing__card__header">
+            <div className="header__left">
+              {displayPageViews(price)} Pageviews
+            </div>
+            <div className="header__right">
+              <span className="header__right--large">${price.toFixed(2)}</span>
+              <p> / month</p>
+            </div>
+          </header>
 
-        <div className="pricing__card__range">
-          <input
-            className="range"
-            style={{
-              background: bg,
-            }}
-            type="range"
-            min={MIN}
-            max={MAX}
-            step={100 / MAX / 100}
-            defaultValue={price}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="pricing__card__toggle">
-          <p>Monthly Billing </p>
-          <label htmlFor="toggle" className="toggle__switch">
+          <div className="pricing__card__range">
             <input
-              type="checkbox"
-              role="switch"
-              id="toggle"
-              value={isMonthly.toString()}
-              checked={isMonthly}
-              aria-checked={isMonthly}
-              onChange={handleToggle}
+              className="range"
+              aria-label="pricing range"
+              style={{
+                background: bg,
+              }}
+              type="range"
+              min={MIN}
+              max={MAX}
+              step={100 / MAX / 100}
+              defaultValue={price}
+              onChange={handleChange}
             />
-            <span className="toggle__slider"></span>
-          </label>
-          <p>
-            Yearly Billing
-            <span> 25% discount</span>
-          </p>
+          </div>
+          <div className="pricing__card__toggle">
+            <p>Monthly Billing </p>
+            <label htmlFor="toggle" className="toggle__switch">
+              <input
+                type="checkbox"
+                role="switch"
+                id="toggle"
+                value={isMonthly.toString()}
+                checked={isMonthly}
+                aria-checked={isMonthly}
+                onChange={handleToggle}
+              />
+              <span className="toggle__slider"></span>
+            </label>
+            <p>
+              Yearly Billing
+              <span className="toggle__discount_flag"> 25% discount</span>
+            </p>
+          </div>
         </div>
         <footer className="pricing__card__footer">
-          <ul>
+          <ul className="list">
             <li>Unlimited websites</li>
             <li> 100% data ownership</li>
             <li> Email reports</li>
           </ul>
-          <button> Start my trial</button>
+          <button className="button"> Start my trial</button>
         </footer>
       </article>
     </main>
